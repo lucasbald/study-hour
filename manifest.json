@@ -1,10 +1,28 @@
 {
   "manifest_version": 2,
-  "version": "0.0.1",
-  "name": "Hello World",
-  "description": "Extensão Hello World",
+  "version": "1.0.0",
+  "name": "Google SignIn",
+  "description": "Extensão Google SignIn",
   "author": "Lucas Baldin",
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  }
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyhgE33Q+aV1agqLYzyktriTtlzaCO4FuVgIP5PfzfdjfKLyLAnR7tZhr3sUHmzzCkcyV8GYs1GquUGitEZkMcGWw2WLFWm/ggDQclKmwD2SihR/GdRJCgIobCr/kojJLotcQDz7wdduXh4bnrH9L9Bu5ZWUILymwN51U3D+BekozBOo6gPrJiEOQA6Eh1thVE0r7UnRwRe+3YdPmJgJh62zBg6eQIfplwqaAvOVtWshO/lGRl3bSLHDRiS2CwA+ftS3NknsGVWFPyozVfZgVWzurWtMoIAhYVvPqmmg5k77kS7L5PIuiELJxaqDl+9u/QMesJmBlugIw03jqftAqcwIDAQAB",
+  "content_security_policy": "script-src 'self' https://apis.google.com https://www.gstatic.com https://www.googleapis.com https://securetoken.googleapis.com https://accounts.google.com/gsi/client; object-src 'self'",
+	"chrome_url_overrides" : {
+		"newtab": "index.html"
+	},
+	"oauth2": {
+		"client_id": "475642402722-m6pkaq5ks6otsnk4396o74j7t2o70vfg.apps.googleusercontent.com",
+		"scopes": [
+			"profile email",
+			"https://www.googleapis.com/auth/contacts"
+		]
+	},
+	"background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+	"permissions":[
+		"identity",
+		"identity.email"
+	]
 }
