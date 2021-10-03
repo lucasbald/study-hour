@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "name": "Hello World",
   "description": "Extensão Hello World",
-  "author": "Diego Martins de Pinho",
+  "author": "Lucas Baldin",
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
